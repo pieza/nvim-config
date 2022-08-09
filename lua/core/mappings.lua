@@ -1,6 +1,6 @@
 local is_available = astronvim.is_available
 
-local maps = { n = {}, v = {}, t = {}, [""] = {} }
+local maps = { n = {}, v = {}, i = {}, t = {}, [""] = {} }
 
 maps[""]["<Space>"] = "<Nop>"
 
@@ -183,6 +183,9 @@ end
 -- Stay in indent mode
 maps.v["<"] = { "<gv", desc = "unindent line" }
 maps.v[">"] = { ">gv", desc = "indent line" }
+
+maps.i["<C-z>"] = { "<Esc>ui", desc = "Undo" }
+maps.i["<C-s>"] = { "<Esc>w!i", desc = "Force write" }
 
 -- Improved Terminal Mappings
 maps.t["<esc>"] = { "<C-\\><C-n>", desc = "Terminal normal mode" }
