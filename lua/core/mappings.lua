@@ -15,6 +15,9 @@ maps.n["gx"] = { function() astronvim.url_opener() end, desc = "Open the file un
 maps.n["<C-s>"] = { "<cmd>w!<cr>", desc = "Force write" }
 maps.n["<C-q>"] = { "<cmd>q!<cr>", desc = "Force quit" }
 maps.n["<C-z>"] = { "<cmd>u<cr>", desc = "Undo" }
+maps.n["<S-Tab>"] = { "<gv", desc = "unindent line" }
+maps.n["<Tab>"] = { ">gv", desc = "indent line" }
+
 maps.n["Q"] = "<Nop>"
 
 -- Packer
@@ -181,8 +184,8 @@ if is_available "toggleterm.nvim" then
 end
 
 -- Stay in indent mode
-maps.v["<"] = { "<gv", desc = "unindent line" }
-maps.v[">"] = { ">gv", desc = "indent line" }
+maps.v["<S-Tab>"] = { "<gv", desc = "unindent line" }
+maps.v["<Tab>"] = { ">gv", desc = "indent line" }
 
 maps.i["<C-z>"] = { "<Esc>ui", desc = "Undo" }
 maps.i["<C-s>"] = { "<Esc>w!i", desc = "Force write" }
