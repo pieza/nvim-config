@@ -1,12 +1,13 @@
 return {
   {
-    "folke/tokyonight.nvim",
+    "oxfist/night-owl.nvim",
     opts = {
-      transparent = true,
+      transparent = false,
+      transparent_background = false,
       styles = {
         sidebars = "transparent",
         floats = "transparent",
       },
     },
-  }
+  },
 }
